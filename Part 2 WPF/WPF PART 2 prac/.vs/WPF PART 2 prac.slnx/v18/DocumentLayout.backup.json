@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Prana\\OneDrive\\Documents\\repoVisualStudioCode\\empty\\Part 2 WPF\\WPF PART 2 prac\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E0ACC91-2473-4D0F-8E22-DEFFD8FA8D63}|WPF PART 2 prac\\WPF PART 2 prac.csproj|c:\\users\\prana\\onedrive\\documents\\repovisualstudiocode\\empty\\part 2 wpf\\wpf part 2 prac\\wpf part 2 prac\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6E0ACC91-2473-4D0F-8E22-DEFFD8FA8D63}|WPF PART 2 prac\\WPF PART 2 prac.csproj|solutionrelative:wpf part 2 prac\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E0ACC91-2473-4D0F-8E22-DEFFD8FA8D63}|WPF PART 2 prac\\WPF PART 2 prac.csproj|c:\\users\\prana\\onedrive\\documents\\repovisualstudiocode\\empty\\part 2 wpf\\wpf part 2 prac\\wpf part 2 prac\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E0ACC91-2473-4D0F-8E22-DEFFD8FA8D63}|WPF PART 2 prac\\WPF PART 2 prac.csproj|solutionrelative:wpf part 2 prac\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Prana\\OneDrive\\Documents\\repoVisualStudioCode\\empty\\Part 2 WPF\\WPF PART 2 prac\\WPF PART 2 prac\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WPF PART 2 prac\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Prana\\OneDrive\\Documents\\repoVisualStudioCode\\empty\\Part 2 WPF\\WPF PART 2 prac\\WPF PART 2 prac\\MainWindow.xaml",
+              "RelativeToolTip": "WPF PART 2 prac\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-23T13:35:21.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Prana\\OneDrive\\Documents\\repoVisualStudioCode\\empty\\Part 2 WPF\\WPF PART 2 prac\\WPF PART 2 prac\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPF PART 2 prac\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Prana\\OneDrive\\Documents\\repoVisualStudioCode\\empty\\Part 2 WPF\\WPF PART 2 prac\\WPF PART 2 prac\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WPF PART 2 prac\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T13:35:20.726Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
