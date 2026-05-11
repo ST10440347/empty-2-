@@ -1,0 +1,72 @@
+name: C# Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+
+    # ==========================================
+    # STEP 1: Checkout repository
+    # Downloads your GitHub repository files
+    # ==========================================
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+
+    # ==========================================
+    # STEP 2: Install .NET SDK
+    # Using .NET 8 because it is stable
+    # and fully supported on GitHub Actions
+    # ==========================================
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+
+    # ==========================================
+    # STEP 3: Display folders/files
+    # ADDED:
+    # Helps debug folder path issues
+    # Good CI/CD troubleshooting practice
+    # ==========================================
+    - name: Show Repository Files
+      run: dir /s
+
+
+    # ==========================================
+    # STEP 4: Restore NuGet packages
+    # UPDATED:
+    # Uses your actual project path
+    # ==========================================
+    - name: Restore Dependencies
+      run: dotnet restore "./Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac/WPF PART 2 prac.csproj"
+
+
+    # ==========================================
+    # STEP 5: Verify formatting
+    # UPDATED:
+    # Checks whether code formatting follows
+    # .NET standards
+    # ==========================================
+    - name: Verify Formatting
+      run: dotnet format "./Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac/WPF PART 2 prac.csproj" --verify-no-changes
+
+
+    # ==========================================
+    # STEP 6: Build the project
+    # UPDATED:
+    # Builds project in Release mode
+    # Good practice for CI pipelines
+    # ==========================================
+    - name: Build Project
+      run: dotnet build "./Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac/WPF PART 2 prac.csproj" --no-restore --configuration Release
