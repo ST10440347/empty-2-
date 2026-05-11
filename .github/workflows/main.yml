@@ -33,14 +33,13 @@ jobs:
         dotnet-version: '10.0.x'
 
 
-    # ==========================================
-    # STEP 3: Display folders/files
-    # ADDED:
-    # Helps debug folder path issues
-    # Good CI/CD troubleshooting practice
-    # ==========================================
+   # ==========================================
+# STEP 3: Display folders/files
+# FIXED:
+# Using PowerShell-compatible command
+# ==========================================
     - name: Show Repository Files
-      run: dir /s
+      run: Get-ChildItem -Recurse
 
 
     # ==========================================
