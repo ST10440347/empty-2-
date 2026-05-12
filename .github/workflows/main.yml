@@ -27,7 +27,7 @@ jobs:
     strategy:
       matrix:
         solution:
-          - "Console Part 01.slnx"
+          - "Empty.slnx"
           - "Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac.slnx"
 
     steps:
