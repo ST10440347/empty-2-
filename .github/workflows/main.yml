@@ -1,3 +1,7 @@
+# ==========================================
+# FILE: .github/workflows/dotnet.yml
+# ==========================================
+
 name: C# Workflow
 
 on:
@@ -7,65 +11,73 @@ on:
   pull_request:
     branches: [ "main" ]
 
+  # Allows manual workflow execution
+  workflow_dispatch:
+
+
 jobs:
   build:
 
     runs-on: windows-latest
 
+    # ==========================================
+    # MATRIX STRATEGY
+    # Builds multiple solutions/projects
+    # ==========================================
+    strategy:
+      matrix:
+        solution:
+          - "Console Part 01.slnx"
+          - "Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac.slnx"
+
     steps:
 
     # ==========================================
     # STEP 1: Checkout repository
-    # Downloads your GitHub repository files
+    # Downloads repo contents
     # ==========================================
     - name: Checkout Repository
       uses: actions/checkout@v4
 
 
     # ==========================================
-    # STEP 2: Install .NET SDK
-    # Using .NET 8 because it is stable
-    # and fully supported on GitHub Actions
+    # STEP 2: Install .NET 10 SDK
+    # Matches your project framework
     # ==========================================
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '10.0.x'
+        include-prerelease: true
 
 
-   # ==========================================
-# STEP 3: Display folders/files
-# FIXED:
-# Using PowerShell-compatible command
-# ==========================================
+    # ==========================================
+    # STEP 3: Display repository files
+    # Helps debug folder/path problems
+    # ==========================================
     - name: Show Repository Files
       run: Get-ChildItem -Recurse
 
 
     # ==========================================
-    # STEP 4: Restore NuGet packages
-    # UPDATED:
-    # Uses your actual project path
+    # STEP 4: Restore dependencies
+    # Uses matrix solution path
     # ==========================================
     - name: Restore Dependencies
-      run: dotnet restore "./Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac/WPF PART 2 prac.csproj"
+      run: dotnet restore "${{ matrix.solution }}"
 
 
     # ==========================================
     # STEP 5: Verify formatting
-    # UPDATED:
-    # Checks whether code formatting follows
-    # .NET standards
+    # Checks formatting consistency
     # ==========================================
     - name: Verify Formatting
-      run: dotnet format "./Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac/WPF PART 2 prac.csproj" --verify-no-changes
+      run: dotnet format "${{ matrix.solution }}" --verify-no-changes
 
 
     # ==========================================
-    # STEP 6: Build the project
-    # UPDATED:
-    # Builds project in Release mode
-    # Good practice for CI pipelines
+    # STEP 6: Build solution
+    # Builds in Release mode
     # ==========================================
-    - name: Build Project
-      run: dotnet build "./Part 2 WPF/WPF PART 2 prac/WPF PART 2 prac/WPF PART 2 prac.csproj" --no-restore --configuration Release
+    - name: Build Solution
+      run: dotnet build "${{ matrix.solution }}" --no-restore --configuration Release
